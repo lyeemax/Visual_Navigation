@@ -1,0 +1,6 @@
+<launch>
+ <include file="$(find astra_camera)/launch/astrapro.launch"/>
+ <node pkg="ORB_SLAM2" type="ORBSLAM2" name="ORB_SLAM2" output="screen" />
+ <node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find ORB_SLAM2)/rviz/rviz.rviz" />
+
+</launch>
